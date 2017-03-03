@@ -19,7 +19,6 @@ import android.widget.Button;
 import android.widget.PopupWindow;
 
 import com.little.picker.listener.LoopListener;
-import com.little.picker.util.DensityUtil;
 import com.little.picker.view.LoopView;
 
 import java.text.ParseException;
@@ -190,8 +189,8 @@ public class DatePickerPopup extends PopupWindow implements OnClickListener {
         confirmBtn.setText(textConfirm);
         cancelBtn.setTextColor(colorCancel);
         confirmBtn.setTextColor(colorConfirm);
-        cancelBtn.setTextSize(DensityUtil.sp2px(mContext,btnTextsize));
-        confirmBtn.setTextSize(DensityUtil.sp2px(mContext,btnTextsize));
+        cancelBtn.setTextSize(btnTextsize);
+        confirmBtn.setTextSize(btnTextsize);
 
         //do not loop,default can loop
         yearLoopView.setNotLoop();
@@ -200,10 +199,10 @@ public class DatePickerPopup extends PopupWindow implements OnClickListener {
         hourLoopView.setNotLoop();
 
         //set loopview text btnTextsize
-        yearLoopView.setTextSize(DensityUtil.sp2px(mContext,viewTextSize));
-        monthLoopView.setTextSize(DensityUtil.sp2px(mContext,viewTextSize));
-        dayLoopView.setTextSize(DensityUtil.sp2px(mContext,viewTextSize));
-        hourLoopView.setTextSize(DensityUtil.sp2px(mContext,viewTextSize));
+        yearLoopView.setTextSize(viewTextSize);
+        monthLoopView.setTextSize(viewTextSize);
+        dayLoopView.setTextSize(viewTextSize);
+        hourLoopView.setTextSize(viewTextSize);
 
         //set checked listen
         yearLoopView.setListener(new LoopListener() {
